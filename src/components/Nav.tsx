@@ -1,0 +1,154 @@
+import { AnimatePresence, motion } from "framer-motion";
+import { Flame, Menu, Phone, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { CONTACT, NAV_LINKS } from "../data/content";
+import { cn } from "../utils/cn";
+
+export default function Nav() {
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  return (
+    <>
+      <motion.header
+        initial={{ y: -80, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        className={cn(
+          "fixed inset-x-0 top-0 z-50 transition-all duration-500",
+          scrolled
+            ? "border-b border-line bg-ink/85 backdrop-blur-xl"
+            : "border-b border-transparent bg-transparent"
+        )}
+      >
+        <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 md:px-8">
+          {/* Brand */}
+          <a href="#top" className="group flex items-center gap-3">
+            <span className="relative grid h-11 w-11 place-items-center overflow-hidden rounded-xl bg-gradient-to-br from-flame to-ember shadow-[0_6px_24px_-6px_rgba(255,90,31,0.6)]">
+              <Flame className="h-6 w-6 text-ink" strokeWidth={2.5} />
+            </span>
+            <span className="leading-none">
+              <span className="block font-display text-xl tracking-wide text-bone">
+                NHL PROJECTS
+              </span>
+              <span className="mt-1 block font-mono text-[9px] tracking-[0.24em] text-fog uppercase">
+                t/a Witness Gasmen (Pty) Ltd
+              </span>
+            </span>
+          </a>
+
+          {/* Desktop links */}
+          <nav className="hidden items-center gap-8 lg:flex">
+            {NAV_LINKS.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                className="group relative font-mono text-[11px] font-medium tracking-[0.18em] text-fog uppercase transition-colors hover:text-bone"
+              >
+                {l.label}
+                <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-flame transition-all duration-300 group-hover:w-full" />
+              </a>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-3">
+            <a
+              href={CONTACT.phoneHref}
+              className="hidden items-center gap-2 font-mono text-xs text-fog transition-colors hover:text-flame md:flex"
+            >
+              <Phone className="h-3.5 w-3.5" />
+              {CONTACT.phoneDisplay}
+            </a>
+            <a
+              href="#contact"
+              className="hidden rounded-full bg-gradient-to-r from-flame to-ember px-6 py-2.5 font-mono text-[11px] font-semibold tracking-[0.18em] text-ink uppercase transition-all duration-300 hover:shadow-[0_8px_28px_-6px_rgba(255,90,31,0.7)] sm:block"
+            >
+              Free Quote
+            </a>
+            <button
+              onClick={() => setOpen(true)}
+              aria-label="Open menu"
+              className="grid h-11 w-11 place-items-center rounded-full border border-line text-bone transition-colors hover:border-flame hover:text-flame lg:hidden"
+            >
+              <Menu className="h-5 w-5" />
+            </button>
+          </div>
+        </div>
+      </motion.header>
+
+      {/* Mobile full-screen menu */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.35 }}
+            className="fixed inset-0 z-[60] flex flex-col bg-ink/97 backdrop-blur-2xl"
+          >
+            <div className="flex h-[72px] items-center justify-between px-5 md:px-8">
+              <span className="font-display text-xl tracking-wide text-bone">
+                NHL PROJECTS
+              </span>
+              <button
+                onClick={() => setOpen(false)}
+                aria-label="Close menu"
+                className="grid h-11 w-11 place-items-center rounded-full border border-line text-bone hover:border-flame hover:text-flame"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+            <nav className="flex flex-1 flex-col justify-center gap-1 px-6">
+              {NAV_LINKS.map((l, i) => (
+                <motion.a
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  initial={{ opacity: 0, x: -32 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.08 + i * 0.06, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                  className="group flex items-baseline gap-4 border-b border-line py-4"
+                >
+                  <span className="font-mono text-xs text-flame">0{i + 1}</span>
+                  <span className="font-display text-4xl tracking-wide text-bone uppercase transition-colors group-hover:text-flame">
+                    {l.label}
+                  </span>
+                </motion.a>
+              ))}
+            </nav>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              className="px-6 pb-10"
+            >
+              <a
+                href={CONTACT.phoneHref}
+                className="flex items-center gap-3 font-mono text-sm text-fog"
+              >
+                <Phone className="h-4 w-4 text-flame" /> {CONTACT.phoneIntl}
+              </a>
+              <p className="mt-3 font-mono text-[11px] tracking-[0.2em] text-fog/60 uppercase">
+                Live green with gas — Est. 2019
+              </p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}
