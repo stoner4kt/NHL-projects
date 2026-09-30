@@ -110,19 +110,6 @@ export interface Service {
 export const SERVICES: Service[] = [
   {
     id: "01",
-    title: "Gas Installation",
-    tagline: "Bulk LPG · CO₂ · Geysers",
-    desc: "Domestic and commercial gas installation with CoC — plus ventilation and extractor fans for commercial kitchens & warehouses, and sprinklers for deluge systems.",
-    bullets: [
-      "Bulk LPG Installation",
-      "CO₂ Installation",
-      "Gas Geysers",
-      "Home & Industrial Installation",
-    ],
-    image: IMAGES.kitchen,
-  },
-  {
-    id: "02",
     title: "Gas Stoves",
     tagline: "Installation & Maintenance",
     desc: "We install gas stoves of all kinds in both domestic and commercial premises — and keep them running at their best.",
@@ -134,21 +121,14 @@ export const SERVICES: Service[] = [
     image: IMAGES.stovePot,
   },
   {
-    id: "03",
+    id: "02",
     title: "C.O.C Issuance",
     tagline: "Domestic & Commercial",
     desc: "We issue the Certificate of Compliance in gas works to both domestic and commercial clients — safe, legal, certified.",
     image: IMAGES.cylindersRed,
   },
   {
-    id: "04",
-    title: "Gas Fireplaces",
-    tagline: "Designed to Your Space",
-    desc: "Domestic and commercial fireplace installation with different designs or sizes, exactly as requested by our client.",
-    image: IMAGES.fireplace,
-  },
-  {
-    id: "05",
+    id: "03",
     title: "Cylinder Exchange",
     tagline: "9KG — 48KG · Free Delivery",
     desc: "We refill and exchange gas from small to bulk cylinders at an affordable charge — delivered free, the same day, around Kempton Park and surrounding areas.",
@@ -156,18 +136,11 @@ export const SERVICES: Service[] = [
     image: IMAGES.cylindersYellow,
   },
   {
-    id: "06",
+    id: "04",
     title: "Gas Welding",
     tagline: "Welding & Cutting",
     desc: "All sorts of gas welding and cutting — precision work for industrial, commercial and domestic needs.",
     image: IMAGES.weldingSparks,
-  },
-  {
-    id: "07",
-    title: "Fire Extinguishers",
-    tagline: "Domestic & Commercial",
-    desc: "Fire extinguisher installation for all sizes of extinguisher bottles — keeping homes and businesses code-compliant and protected.",
-    image: IMAGES.extinguisher,
   },
 ];
 
@@ -230,12 +203,6 @@ export const PROJECTS = [
     subtitle: "Bulk Gas Installation",
     category: "Bulk LPG",
     image: IMAGES.tanks,
-  },
-  {
-    title: "Gas Fireplace",
-    subtitle: "Domestic Gas Installation",
-    category: "Domestic",
-    image: IMAGES.fireplace,
   },
   {
     title: "Gas Stove",

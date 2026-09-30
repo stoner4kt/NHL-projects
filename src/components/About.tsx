@@ -51,31 +51,6 @@ export default function About() {
               </p>
             </Reveal>
 
-            {/* Image with badge */}
-            <Reveal delay={0.24}>
-              <div className="group relative mt-10 overflow-hidden rounded-2xl border border-line">
-                <motion.img
-                  src={IMAGES.technician}
-                  alt="Witness Gasmen technician"
-                  className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-3">
-                  <div className="flex items-center gap-2.5 rounded-full border border-bone/15 bg-ink/70 px-4 py-2 backdrop-blur-md">
-                    <Leaf className="h-4 w-4 text-flame" />
-                    <span className="font-mono text-[10px] tracking-[0.2em] text-bone uppercase">
-                      Live green with gas
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2 rounded-full bg-gradient-to-r from-flame to-ember px-4 py-2">
-                    <BadgeCheck className="h-4 w-4 text-ink" />
-                    <span className="font-mono text-[10px] font-semibold tracking-[0.2em] text-ink uppercase">
-                      BEE L1 · 145% recognition
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
           </div>
 
           {/* Right — values */}
