@@ -26,11 +26,11 @@ export const IMAGES = {
   stovePot:
     "/images/Vaal-University-Science-Lab-Renovation.jpg",
   fireplace: "/images/fireplace.jpg",
-  laboratory: "/images/laboratory.jpg",
+  laboratory: "/images/Vaal-University-Science-Lab-Renovation.jpg",
   kitchen: "/images/commercial-kitchen.jpg",
   extinguisher: "/images/fire-extinguisher.jpg",
-  gasLine: "/images/gas-line.jpg",
-  drainage: "/images/drainage.jpg",
+  gasLine: "/images/Gas-line.jpg",
+  drainage: "/images/Drainage-and-water-supply.jpg",
   technician: "/images/technician.jpg",
 };
 
