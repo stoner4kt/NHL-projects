@@ -4,33 +4,30 @@
 /* ------------------------------------------------------------------ */
 
 export const IMAGES = {
+  logo: "/images/Nhl-Projects-Logo-2048x2048.png",
   heroFlames:
-    "https://images.pexels.com/photos/4063198/pexels-photo-4063198.png?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=1920",
+    "/images/010.webp",
   orangeFlames:
-    "https://images.pexels.com/photos/19142303/pexels-photo-19142303.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1600",
+    "/images/001.webp",
   stoveFlame:
-    "https://images.pexels.com/photos/6831130/pexels-photo-6831130.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400",
+    "/images/007.webp",
   blueBurner:
-    "https://images.pexels.com/photos/4063198/pexels-photo-4063198.png?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400",
+    "/images/012.webp",
   cylindersYellow:
-    "https://images.pexels.com/photos/35382734/pexels-photo-35382734.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1000&w=800",
+    "/images/023.webp",
   cylindersRed:
-    "https://images.pexels.com/photos/16271901/pexels-photo-16271901.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=800&w=1200",
+    "/images/350978278_1343836652838059_597710423635711427_n.jpg",
   tanks:
-    "https://images.pexels.com/photos/30527340/pexels-photo-30527340.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400",
+    "/images/IMG-20240605-WA0032.jpg",
   weldingSparks:
-    "https://images.pexels.com/photos/30180598/pexels-photo-30180598.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400",
+    "/images/Witness-Gasmen-Gas-Welding-002.webp",
   welderPipe:
-    "https://images.pexels.com/photos/38194659/pexels-photo-38194659.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1000&w=800",
+    "/images/WhatsApp-Image-2024-05-24-at-17.37.55_de50077d.jpg",
   stovePot:
-    "https://images.pexels.com/photos/12673645/pexels-photo-12673645.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400",
-  fireplace: "/images/fireplace.jpg",
-  laboratory: "/images/laboratory.jpg",
-  kitchen: "/images/commercial-kitchen.jpg",
-  extinguisher: "/images/fire-extinguisher.jpg",
-  gasLine: "/images/gas-line.jpg",
-  drainage: "/images/drainage.jpg",
-  technician: "/images/technician.jpg",
+    "/images/Vaal-University-Science-Lab-Renovation.jpg",
+  laboratory: "/images/Vaal-University-Science-Lab-Renovation.jpg",
+  gasLine: "/images/Gas-line.jpg",
+  drainage: "/images/Drainage-and-water-supply.jpg",
 };
 
 export const CONTACT = {
