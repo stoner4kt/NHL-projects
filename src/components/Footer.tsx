@@ -22,12 +22,12 @@ export default function Footer() {
                   NHL PROJECTS
                 </span>
                 <span className="mt-1 block font-mono text-[9px] tracking-[0.24em] text-fog uppercase">
-                  t/a Witness Gasmen (Pty) Ltd
+                  t/a NHL Projects (Pty) Ltd
                 </span>
               </span>
             </a>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-fog">
-              NHL Projects — Trading As Witness Gasmen (Pty) Limited. We are
+              NHL Projects — Trading As NHL Projects (Pty) Limited. We are
               accountable for all our decisions and activities that may impact the
               environment and society in general, to live green with gas.
             </p>
