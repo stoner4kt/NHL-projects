@@ -33,7 +33,7 @@ export default function About() {
               <p className="text-lg leading-relaxed text-bone/85 md:text-xl">
                 We are{" "}
                 <span className="font-semibold text-bone">
-                  NHL Projects — Trading As Witness Gasmen (Pty) Limited
+                  NHL Projects — Trading As NHL Projects (Pty) Limited
                 </span>
                 , a South African company with BEE Level 1, formed and founded by{" "}
                 <span className="font-semibold text-flame">Witness Mabasa</span>{" "}
@@ -42,7 +42,7 @@ export default function About() {
             </Reveal>
             <Reveal delay={0.18}>
               <p className="mt-6 leading-relaxed text-fog">
-                Witness Gasmen holds itself accountable for all decisions and
+                NHL Projects holds itself accountable for all decisions and
                 activities that may impact the environment and society in general —
                 to live green with gas. What began as a one-man domestic installation
                 operation is today a registered, multi-accredited team serving the

@@ -51,7 +51,7 @@ export default function Nav() {
                 NHL PROJECTS
               </span>
               <span className="mt-1 block font-mono text-[9px] tracking-[0.24em] text-fog uppercase">
-                t/a Witness Gasmen (Pty) Ltd
+                t/a NHL Projects (Pty) Ltd
               </span>
             </span>
           </a>

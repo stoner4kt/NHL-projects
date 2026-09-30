@@ -45,7 +45,7 @@ export default function Hero() {
         >
           <span className="flex items-center gap-2.5 rounded-full border border-bone/15 bg-ink/40 px-4 py-2 font-mono text-[10px] tracking-[0.28em] text-bone/80 uppercase backdrop-blur-md">
             <span className="h-2 w-2 animate-pulse-dot rounded-full bg-flame" />
-            Witness Gasmen (Pty) Ltd — Est. 2019
+            NHL Projects (Pty) Ltd — Est. 2019
           </span>
           <span className="hidden items-center gap-2 font-mono text-[10px] tracking-[0.28em] text-fog uppercase md:flex">
             <MapPin className="h-3.5 w-3.5 text-flame" />

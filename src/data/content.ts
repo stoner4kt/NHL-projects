@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------ */
-/*  NHL Projects — t/a Witness Gasmen (Pty) Ltd                        */
+/*  NHL Projects — t/a NHL Projects (Pty) Ltd                        */
 /*  All content sourced from nhl-projects.co.za                        */
 /* ------------------------------------------------------------------ */
 
@@ -157,7 +157,7 @@ export const TIMELINE = [
     year: "2019",
     title: "The Foundation",
     subtitle: "Establishment",
-    desc: "Witness Gasmen (Pty) Limited started operating in South Africa as a domestic gas installer.",
+    desc: "NHL Projects (Pty) Limited started operating in South Africa as a domestic gas installer.",
   },
   {
     year: "2023",
@@ -227,7 +227,7 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      "Having such a great cost-effective gas appliances installation. I personally thank Witness Gasmen for such a valuable job done at our restaurant.",
+      "Having such a great cost-effective gas appliances installation. I personally thank NHL Projects for such a valuable job done at our restaurant.",
     name: "MLM Fresh & Chips",
     role: "CEO",
   },
