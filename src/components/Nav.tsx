@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { Flame, Menu, Phone, X } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { CONTACT, NAV_LINKS } from "../data/content";
+import { CONTACT, IMAGES, NAV_LINKS } from "../data/content";
 import { cn } from "../utils/cn";
 
 export default function Nav() {
@@ -38,8 +38,13 @@ export default function Nav() {
         <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 md:px-8">
           {/* Brand */}
           <a href="#top" className="group flex items-center gap-3">
-            <span className="relative grid h-11 w-11 place-items-center overflow-hidden rounded-xl bg-gradient-to-br from-flame to-ember shadow-[0_6px_24px_-6px_rgba(255,90,31,0.6)]">
-              <Flame className="h-6 w-6 text-ink" strokeWidth={2.5} />
+            <span className="relative flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-[var(--color-flame)]/40 bg-gradient-to-br from-[#0a1628] to-[#0d1f42] shadow-[0_6px_24px_-6px_rgba(26,111,255,0.45)]">
+              <img src={IMAGES.logo} alt="NHL Projects logo" className="absolute inset-0 z-10 h-full w-full object-contain p-1" onError={(e) => { e.currentTarget.style.display = "none"; }} />
+              <svg viewBox="0 0 40 44" fill="none" className="absolute z-0 h-8 w-8" aria-hidden="true">
+                <path d="M20 2L4 8v14c0 9.94 6.84 18.24 16 20 9.16-1.76 16-10.06 16-20V8L20 2z" fill="url(#shieldGrad)" stroke="rgba(26,111,255,0.6)" strokeWidth="0.8" />
+                <text x="50%" y="54%" dominantBaseline="middle" textAnchor="middle" fill="white" fontSize="18" fontFamily="Anton, Arial Narrow, sans-serif" letterSpacing="1" fontWeight="700">N</text>
+                <defs><linearGradient id="shieldGrad" x1="20" y1="2" x2="20" y2="42" gradientUnits="userSpaceOnUse"><stop offset="0%" stopColor="#1a3a6a" /><stop offset="100%" stopColor="#0a1628" /></linearGradient></defs>
+              </svg>
             </span>
             <span className="leading-none">
               <span className="block font-display text-xl tracking-wide text-bone">
@@ -101,9 +106,14 @@ export default function Nav() {
             className="fixed inset-0 z-[60] flex flex-col bg-ink/97 backdrop-blur-2xl"
           >
             <div className="flex h-[72px] items-center justify-between px-5 md:px-8">
-              <span className="font-display text-xl tracking-wide text-bone">
-                NHL PROJECTS
-              </span>
+              <span className="relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-[var(--color-flame)]/40 bg-gradient-to-br from-[#0a1628] to-[#0d1f42] shadow-[0_6px_24px_-6px_rgba(26,111,255,0.45)]">
+              <img src={IMAGES.logo} alt="NHL Projects logo" className="absolute inset-0 z-10 h-full w-full object-contain p-1" onError={(e) => { e.currentTarget.style.display = "none"; }} />
+              <svg viewBox="0 0 40 44" fill="none" className="absolute z-0 h-7 w-7" aria-hidden="true">
+                <path d="M20 2L4 8v14c0 9.94 6.84 18.24 16 20 9.16-1.76 16-10.06 16-20V8L20 2z" fill="url(#shieldGrad)" stroke="rgba(26,111,255,0.6)" strokeWidth="0.8" />
+                <text x="50%" y="54%" dominantBaseline="middle" textAnchor="middle" fill="white" fontSize="18" fontFamily="Anton, Arial Narrow, sans-serif" letterSpacing="1" fontWeight="700">N</text>
+                <defs><linearGradient id="shieldGrad" x1="20" y1="2" x2="20" y2="42" gradientUnits="userSpaceOnUse"><stop offset="0%" stopColor="#1a3a6a" /><stop offset="100%" stopColor="#0a1628" /></linearGradient></defs>
+              </svg>
+            </span>
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Close menu"
