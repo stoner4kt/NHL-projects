@@ -28,11 +28,11 @@ export default function App() {
         <Hero />
 
         {/* Accreditation marquee */}
-        <div className="relative bg-flame py-4">
+        <div className="relative bg-[#0d1f42] py-4">
           <Marquee
             items={ACCREDITATION_STRIP}
-            className="text-ink"
-            separatorClassName="text-ink/70"
+            className="text-bone"
+            separatorClassName="text-[var(--color-flame)]/80"
           />
         </div>
 
