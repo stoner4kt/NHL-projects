@@ -1,5 +1,5 @@
-import { ArrowUp, Flame, Mail, MapPin, Phone } from "lucide-react";
-import { CONTACT, NAV_LINKS } from "../data/content";
+import { ArrowUp, Mail, MapPin, Phone } from "lucide-react";
+import { CONTACT, IMAGES, NAV_LINKS } from "../data/content";
 
 export default function Footer() {
   return (
@@ -9,9 +9,14 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <a href="#top" className="flex items-center gap-3">
-              <span className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-flame to-ember">
-                <Flame className="h-6 w-6 text-ink" strokeWidth={2.5} />
-              </span>
+              <span className="relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-[var(--color-flame)]/40 bg-gradient-to-br from-[#0a1628] to-[#0d1f42] shadow-[0_6px_24px_-6px_rgba(26,111,255,0.45)]">
+              <img src={IMAGES.logo} alt="NHL Projects logo" className="absolute inset-0 z-10 h-full w-full object-contain p-1" onError={(e) => { e.currentTarget.style.display = "none"; }} />
+              <svg viewBox="0 0 40 44" fill="none" className="absolute z-0 h-7 w-7" aria-hidden="true">
+                <path d="M20 2L4 8v14c0 9.94 6.84 18.24 16 20 9.16-1.76 16-10.06 16-20V8L20 2z" fill="url(#shieldGrad)" stroke="rgba(26,111,255,0.6)" strokeWidth="0.8" />
+                <text x="50%" y="54%" dominantBaseline="middle" textAnchor="middle" fill="white" fontSize="18" fontFamily="Anton, Arial Narrow, sans-serif" letterSpacing="1" fontWeight="700">N</text>
+                <defs><linearGradient id="shieldGrad" x1="20" y1="2" x2="20" y2="42" gradientUnits="userSpaceOnUse"><stop offset="0%" stopColor="#1a3a6a" /><stop offset="100%" stopColor="#0a1628" /></linearGradient></defs>
+              </svg>
+            </span>
               <span className="leading-none">
                 <span className="block font-display text-xl tracking-wide text-bone">
                   NHL PROJECTS
