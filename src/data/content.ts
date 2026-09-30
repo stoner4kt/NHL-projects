@@ -25,13 +25,9 @@ export const IMAGES = {
     "/images/WhatsApp-Image-2024-05-24-at-17.37.55_de50077d.jpg",
   stovePot:
     "/images/Vaal-University-Science-Lab-Renovation.jpg",
-  fireplace: "/images/fireplace.jpg",
   laboratory: "/images/Vaal-University-Science-Lab-Renovation.jpg",
-  kitchen: "/images/commercial-kitchen.jpg",
-  extinguisher: "/images/fire-extinguisher.jpg",
   gasLine: "/images/Gas-line.jpg",
   drainage: "/images/Drainage-and-water-supply.jpg",
-  technician: "/images/technician.jpg",
 };
 
 export const CONTACT = {
