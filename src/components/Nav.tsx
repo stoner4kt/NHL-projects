@@ -115,9 +115,9 @@ export default function Nav() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35 }}
-            className="fixed inset-0 z-[60] flex flex-col bg-ink/97 backdrop-blur-2xl"
+            className="fixed inset-0 z-[60] flex min-h-0 flex-col overflow-hidden bg-ink/97 backdrop-blur-2xl"
           >
-            <div className="flex h-[72px] items-center justify-between px-5 md:px-8">
+            <div className="flex h-[72px] shrink-0 items-center justify-between border-b border-line px-5 md:px-8">
               <span className="relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-[var(--color-flame)]/40 bg-gradient-to-br from-[#0a1628] to-[#0d1f42] shadow-[0_6px_24px_-6px_rgba(26,111,255,0.45)]">
               <img src={IMAGES.logo} alt="NHL Projects logo" className="absolute inset-0 z-10 h-full w-full object-contain p-1" onError={(e) => { e.currentTarget.style.display = "none"; }} />
               <svg viewBox="0 0 40 44" fill="none" className="absolute z-0 h-7 w-7" aria-hidden="true">
@@ -134,17 +134,17 @@ export default function Nav() {
                 <X className="h-5 w-5" />
               </button>
             </div>
-            <nav className="flex flex-1 flex-col justify-center gap-1 px-6">
+            <nav className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-5 py-5 md:px-8">
               {NAV_LINKS.filter((l) => l.label !== "Services").map((l, i) => (
-                <motion.a key={l.href} href={l.href} onClick={() => setOpen(false)} initial={{ opacity: 0, x: -32 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.08 + i * 0.06, duration: 0.5, ease: [0.22, 1, 0.36, 1] }} className="group flex items-baseline gap-4 border-b border-line py-4">
-                  <span className="font-mono text-xs text-flame">0{i + 1}</span><span className="font-display text-4xl tracking-wide text-bone uppercase transition-colors group-hover:text-flame">{l.label}</span>
+                <motion.a key={l.href} href={l.href} onClick={() => setOpen(false)} initial={{ opacity: 0, x: -32 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.08 + i * 0.06, duration: 0.5, ease: [0.22, 1, 0.36, 1] }} className="group flex min-h-12 items-center gap-4 border-b border-line py-3">
+                  <span className="font-mono text-xs text-flame">0{i + 1}</span><span className="font-display text-2xl tracking-wide text-bone uppercase transition-colors group-hover:text-flame sm:text-3xl">{l.label}</span>
                 </motion.a>
               ))}
-              <div className="border-b border-line py-4">
-                <p className="flex items-center gap-2 font-display text-4xl tracking-wide text-bone uppercase"><span className="font-mono text-xs text-flame">05</span> Services</p>
-                <div className="mt-3 grid gap-1 pl-7">
+              <div className="border-b border-line py-3">
+                <p className="flex min-h-12 items-center gap-4 font-display text-2xl tracking-wide text-bone uppercase sm:text-3xl"><span className="font-mono text-xs text-flame">05</span> Services</p>
+                <div className="mt-2 grid gap-1 pl-10 sm:grid-cols-2">
                   {SERVICE_PAGES.map((service) => (
-                    <a key={service.slug} href={"/services/" + service.slug} onClick={() => setOpen(false)} className="rounded-lg px-3 py-2.5 font-mono text-xs tracking-[0.08em] text-fog uppercase transition-colors hover:bg-coal hover:text-flame">{service.title}</a>
+                    <a key={service.slug} href={"/services/" + service.slug} onClick={() => setOpen(false)} className="rounded-lg border border-transparent px-3 py-2.5 font-mono text-[10px] leading-4 tracking-[0.08em] text-fog uppercase transition-colors hover:border-line hover:bg-coal hover:text-flame">{service.title}</a>
                   ))}
                 </div>
               </div>
@@ -153,7 +153,7 @@ export default function Nav() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="px-6 pb-10"
+              className="shrink-0 border-t border-line bg-ink/95 px-5 py-4 pb-[max(1rem,env(safe-area-inset-bottom))] backdrop-blur-xl md:px-8"
             >
               <a
                 href={CONTACT.phoneHref}
