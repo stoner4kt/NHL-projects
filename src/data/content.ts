@@ -241,3 +241,15 @@ export const NAV_LINKS = [
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
+
+
+export const GALLERY_IMAGES = [
+  { src: "/images/Drainage-and-water-supply-433x325.jpg", alt: "Drainage and water supply project" },
+  { src: "/images/Drainage-and-water-supply.jpg", alt: "Drainage and water supply work" },
+  { src: "/images/IMG-20240605-WA0027-300x225.jpg", alt: "NHL Projects installation work" },
+  { src: "/images/Vaal-University-433x244.jpg", alt: "Vaal University project" },
+  { src: "/images/Vaal-University-Science-Lab-Renovation-2-433x325.jpg", alt: "Vaal University science lab renovation" },
+  { src: "/images/Vaal-University-Science-Lab-Renovation-3-433x577.jpg", alt: "Vaal University science lab renovation" },
+  { src: "/images/Vaal-University-Science-Lab-Renovation-4-433x325.jpg", alt: "Vaal University science lab renovation" },
+  { src: "/images/Vaal-University-Science-Lab-Renovation-6-433x577.jpg", alt: "Vaal University science lab renovation" },
+];
