@@ -24,7 +24,10 @@ export default function Journey() {
             <div className="space-y-12">
               {TIMELINE.map((t, i) => (
                 <Reveal key={t.year} delay={i * 0.08}>
-                  <div className="group relative pl-10 md:pl-14">
+                  <a
+                      href={t.year === "2024" ? "/services/compressed-gas" : undefined}
+                      className={t.year === "2024" ? "group relative block rounded-xl pl-10 transition-all duration-300 hover:border-flame/40 hover:bg-steel/30 md:pl-14" : "group relative block pl-10 md:pl-14"}
+                    >
                     <motion.span
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
