@@ -1,10 +1,25 @@
 import { ArrowLeft, ArrowUpRight, CheckCircle2, MapPin } from "lucide-react";
-import { getServicePage } from "../data/services";
+import { getServiceGallery, getServicePage } from "../data/services";
+import { useEffect } from "react";
 import { FlameButton, Reveal } from "./ui";
 
 export default function ServicePage({ slug }: { slug: string }) {
   const service = getServicePage(slug);
+  const gallery = getServiceGallery(slug);
 
+  useEffect(() => {
+    if (!service) return;
+    document.title = service.seoTitle || service.title + " | NHL Projects";
+    const meta = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
+    if (meta) meta.content = service.metaDescription || service.description;
+    const canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (canonical) canonical.href = window.location.origin + "/services/" + service.slug;
+    document.getElementById("service-schema")?.remove();
+    const schema = document.createElement("script"); schema.id = "service-schema"; schema.type = "application/ld+json";
+    schema.textContent = JSON.stringify({"@context":"https://schema.org","@type":"Service","name":service.title,"description":service.description,"url":window.location.href,"image":window.location.origin+service.image,"provider":{"@type":"LocalBusiness","name":"NHL Projects (Pty) Ltd","telephone":"+27 84 226 0353","address":{"@type":"PostalAddress","streetAddress":"22 Kokerboom Cres","addressLocality":"Birchleigh, Kempton Park","postalCode":"1621","addressCountry":"ZA"}},"areaServed":[{"@type":"State","name":"Gauteng"},{"@type":"Country","name":"South Africa"}]});
+    document.head.appendChild(schema);
+    return () => schema.remove();
+  }, [service]);
   if (!service) {
     return (
       <main className="min-h-screen bg-ink px-5 py-32 text-bone">
@@ -138,6 +153,16 @@ export default function ServicePage({ slug }: { slug: string }) {
           </div>
         </section>
 
+        {gallery.length > 0 && (
+          <section className="border-y border-line bg-coal py-20 md:py-28">
+            <div className="mx-auto max-w-7xl px-5 md:px-8">
+              <Reveal><p className="font-mono text-[10px] tracking-[0.3em] text-flame uppercase">Project Gallery</p><h2 className="mt-4 font-display text-4xl tracking-wide uppercase md:text-5xl">Relevant {service.title} work.</h2></Reveal>
+              <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {gallery.map((item, index) => (<Reveal key={item.src} delay={index * 0.025}><figure className="overflow-hidden rounded-2xl border border-line bg-ink"><img src={item.src} alt={item.alt} loading={index < 3 ? "eager" : "lazy"} className="aspect-[4/3] w-full object-cover" /><figcaption className="px-4 py-3 text-xs text-fog">{item.alt}</figcaption></figure></Reveal>))}
+              </div>
+            </div>
+          </section>
+        )}
         {(service.serviceLevelAgreements || service.whatsCovered || service.plantMaintained) && (
           <section className="py-20 md:py-28">
             <div className="mx-auto grid max-w-7xl gap-8 px-5 md:px-8 lg:grid-cols-3">
