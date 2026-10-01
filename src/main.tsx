@@ -3,6 +3,10 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App";
 
+declare global {
+  interface Window { dataLayer: unknown[]; gtag: (...args: unknown[]) => void; }
+}
+
 const gaId = import.meta.env.VITE_GA4_MEASUREMENT_ID;
 if (gaId) {
   const script = document.createElement("script");
