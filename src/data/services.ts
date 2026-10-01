@@ -35,7 +35,7 @@ export const SERVICE_PAGES: ServicePageData[] = [
       "Industrial and commercial buildings",
       "Schools & universities",
     ],
-    image: "/images/Gas-Fire-Place-Installation-433x577.jpg",
+    image: "/images/Gas-Fire-Place-Installation.jpg",
     coverage: COVERAGE,
   },
   {
@@ -153,7 +153,7 @@ export const SERVICE_PAGES: ServicePageData[] = [
       "Dental practices",
       "Research laboratories",
     ],
-    image: "/images/Vaal-University-Science-Lab-Renovation.jpg",
+    image: "/images/Vaal-University-Science-Lab-Renovation1.jpg",
     coverage: COVERAGE,
   },
   {
@@ -176,7 +176,7 @@ export const SERVICE_PAGES: ServicePageData[] = [
       "Food & beverage",
       "Laboratories",
     ],
-    image: "/images/350925690_1649870288848561_7772135990305632973_n-1152x1536.jpg",
+    image: "/images/IMG-20240605-WA0032.jpg",
     coverage: COVERAGE,
   },
   {
@@ -199,7 +199,7 @@ export const SERVICE_PAGES: ServicePageData[] = [
       "Industrial and commercial & retail",
       "Mining & remote sites",
     ],
-    image: "/images/350978278_1343836652838059_597710423635711427_n.jpg",
+    image: "/images/001.webp",
     coverage: COVERAGE,
   },
   {
@@ -271,7 +271,7 @@ export const SERVICE_PAGES: ServicePageData[] = [
       "Laboratories",
       "Industrial and commercial",
     ],
-    image: "/images/Witness-Gasmen-Gas-Welding-002.webp",
+    image: "/images/Gas-Fire-Place-Installation.jpg",
     coverage: COVERAGE,
   },
   {
@@ -315,7 +315,7 @@ export const SERVICE_PAGES: ServicePageData[] = [
       "Industrial and commercial",
       "Steel & metal fabrication",
     ],
-    image: "/images/350925690_1649870288848561_7772135990305632973_n-1152x1536.jpg",
+    image: "/images/IMG-20240605-WA0032.jpg",
     coverage: COVERAGE,
   },
   {

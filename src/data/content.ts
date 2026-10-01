@@ -12,22 +12,22 @@ export const IMAGES = {
   stoveFlame:
     "/images/007.webp",
   blueBurner:
-    "/images/012.webp",
+    "/images/GasStove2.jpg",
   cylindersYellow:
     "/images/023.webp",
   cylindersRed:
-    "/images/350978278_1343836652838059_597710423635711427_n.jpg",
+    "/images/023.webp",
   tanks:
     "/images/IMG-20240605-WA0032.jpg",
   weldingSparks:
-    "/images/Witness-Gasmen-Gas-Welding-002.webp",
+    "/images/Gas-Fire-Place-Installation.jpg",
   welderPipe:
-    "/images/WhatsApp-Image-2024-05-24-at-17.37.55_de50077d.jpg",
+    "/images/IMG-20240605-WA0032.jpg",
   stovePot:
-    "/images/350978278_1343836652838059_597710423635711427_n.jpg",
-  laboratory: "/images/Vaal-University-Science-Lab-Renovation.jpg",
-  gasLine: "/images/Gas-line.jpg",
-  drainage: "/images/Drainage-and-water-supply.jpg",
+    "/images/gasstove3.jpg",
+  laboratory: "/images/Vaal-University-Science-Lab-Renovation1.jpg",
+  gasLine: "/images/gascylinder1.jpg",
+  drainage: "/images/Drainage-and-water-supply1plumbing.jpg",
 };
 
 export const CONTACT = {
@@ -197,7 +197,7 @@ export const PROJECTS = [
     title: "Gas Line Installation",
     subtitle: "Vaal University Science Lab Renovations",
     category: "Gas Lines",
-    image: IMAGES.tanks,
+    image: IMAGES.heroFlames,
   },
   {
     title: "Industrial and Commercial Gas",
@@ -245,12 +245,12 @@ export const NAV_LINKS = [
 
 
 export const GALLERY_IMAGES = [
-  { src: "/images/Drainage-and-water-supply-433x325.jpg", alt: "Drainage and water supply project" },
-  { src: "/images/Drainage-and-water-supply.jpg", alt: "Drainage and water supply work" },
-  { src: "/images/IMG-20240605-WA0027-300x225.jpg", alt: "NHL Projects installation work" },
+  { src: "/images/Drainage-and-water-supply1plumbing.jpg", alt: "Drainage and water supply project" },
+  { src: "/images/Vaal-University-Science-Lab-Renovation1.jpg", alt: "Vaal University science lab renovation" },
+  { src: "/images/Vaal-University-Science-Lab-Renovation2.jpg", alt: "Vaal University science lab renovation" },
   { src: "/images/Vaal-University-433x244.jpg", alt: "Vaal University project" },
-  { src: "/images/Vaal-University-Science-Lab-Renovation-2-433x325.jpg", alt: "Vaal University science lab renovation" },
-  { src: "/images/Vaal-University-Science-Lab-Renovation-3-433x577.jpg", alt: "Vaal University science lab renovation" },
-  { src: "/images/Vaal-University-Science-Lab-Renovation-4-433x325.jpg", alt: "Vaal University science lab renovation" },
-  { src: "/images/Vaal-University-Science-Lab-Renovation-6-433x577.jpg", alt: "Vaal University science lab renovation" },
+  { src: "/images/Vaal-University-Science-Lab-Renovation3.jpg", alt: "Vaal University science lab renovation" },
+  { src: "/images/Vaal-University-Science-Lab-Renovation4.jpg", alt: "Vaal University science lab renovation" },
+  { src: "/images/Vaal-University-Science-Lab-Renovation5.jpg", alt: "Vaal University science lab renovation" },
+  { src: "/images/Gas-Fire-Place-Installation.jpg", alt: "Gas fireplace installation work" },
 ];
