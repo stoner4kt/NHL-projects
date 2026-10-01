@@ -12,11 +12,11 @@ export const IMAGES = {
   stoveFlame:
     "/images/007.webp",
   blueBurner:
-    "/images/012.webp",
+    "/images/GasStove2.jpg",
   cylindersYellow:
     "/images/023.webp",
   cylindersRed:
-    "/images/350978278_1343836652838059_597710423635711427_n.jpg",
+    "/images/023.webp",
   tanks:
     "/images/IMG-20240605-WA0032.jpg",
   weldingSparks:
@@ -24,9 +24,9 @@ export const IMAGES = {
   welderPipe:
     "/images/WhatsApp-Image-2024-05-24-at-17.37.55_de50077d.jpg",
   stovePot:
-    "/images/350978278_1343836652838059_597710423635711427_n.jpg",
+    "/images/gasstove3.jpg",
   laboratory: "/images/Vaal-University-Science-Lab-Renovation.jpg",
-  gasLine: "/images/Gas-line.jpg",
+  gasLine: "/images/gascylinder1.jpg",
   drainage: "/images/Drainage-and-water-supply.jpg",
 };
 
@@ -197,7 +197,7 @@ export const PROJECTS = [
     title: "Gas Line Installation",
     subtitle: "Vaal University Science Lab Renovations",
     category: "Gas Lines",
-    image: IMAGES.tanks,
+    image: IMAGES.heroFlames,
   },
   {
     title: "Industrial and Commercial Gas",
