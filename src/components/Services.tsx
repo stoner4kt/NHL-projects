@@ -45,7 +45,7 @@ export default function Services() {
           {SERVICES.map((s, i) => (
             <Reveal key={s.id} delay={i * 0.04}>
               <a
-                href={`/services/${({ "Gas Stoves": "gas-appliance-installation", "Certificate of Compliance": "gas-compliance-safety", "Cylinder Exchange": "lpg-bulk-gas", "Gas Welding": "industrial-gas-infrastructure" } as Record<string, string>)[s.title] || "gas-system-setup"}
+                href={`/services/${({ "Gas Stoves": "gas-appliance-installation", "Certificate of Compliance": "gas-compliance-safety", "Cylinder Exchange": "lpg-bulk-gas", "Gas Welding": "industrial-gas-infrastructure" } as Record<string, string>)[s.title] || "gas-system-setup"`}
                 onMouseEnter={() => setActive(i)}
                 onMouseLeave={() => setActive(null)}
                 className="group relative block border-b border-line py-8 transition-colors duration-300 hover:bg-steel/40 md:py-10"
