@@ -15,7 +15,7 @@ export default function Projects() {
               & passion.
             </>
           }
-          copy="From university science labs to bulk commercial installations — a selection of what our team has delivered."
+          copy="From university science labs to bulk industrial and commercial installations — a selection of what our team has delivered."
         />
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:mt-20 lg:grid-cols-3">
