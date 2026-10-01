@@ -47,7 +47,7 @@ export default function Journey() {
                       {t.title}
                     </h3>
                     <p className="mt-2 max-w-lg leading-relaxed text-fog">{t.desc}</p>
-                  </div>
+                    </a>
                 </Reveal>
               ))}
             </div>
