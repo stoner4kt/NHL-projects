@@ -24,7 +24,7 @@ export const IMAGES = {
   welderPipe:
     "/images/WhatsApp-Image-2024-05-24-at-17.37.55_de50077d.jpg",
   stovePot:
-    "/images/Vaal-University-Science-Lab-Renovation.jpg",
+    "/images/350978278_1343836652838059_597710423635711427_n.jpg",
   laboratory: "/images/Vaal-University-Science-Lab-Renovation.jpg",
   gasLine: "/images/Gas-line.jpg",
   drainage: "/images/Drainage-and-water-supply.jpg",
