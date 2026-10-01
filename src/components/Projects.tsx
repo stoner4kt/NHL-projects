@@ -2,6 +2,18 @@ import { ArrowUpRight } from "lucide-react";
 import { GALLERY_IMAGES, PROJECTS } from "../data/content";
 import { Reveal, SectionHeading } from "./ui";
 
+const PROJECT_SERVICE_ROUTES: Record<string, string> = {
+  "Drainage & Water Supply": "gas-system-setup",
+  "Laboratory Renovations": "medical-gas-infrastructure",
+  "Gas Line Installation": "gas-pipe-line-work",
+  "Industrial and Commercial Gas": "lpg-bulk-gas",
+  "Gas Stove": "gas-appliance-installation",
+};
+
+function getProjectServiceRoute(title: string) {
+  return PROJECT_SERVICE_ROUTES[title] || "gas-system-setup";
+}
+
 export default function Projects() {
   return (
     <section id="projects" className="relative bg-ink py-24 md:py-36">
