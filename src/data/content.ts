@@ -100,6 +100,7 @@ export const ACCREDITATIONS = [
 
 export interface Service {
   id: string;
+  slug: string;
   title: string;
   tagline: string;
   desc: string;
