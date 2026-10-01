@@ -20,7 +20,7 @@ export const IMAGES = {
   tanks:
     "/images/IMG-20240605-WA0032.jpg",
   weldingSparks:
-    "/images/Witness-Gasmen-Gas-Welding-002.webp",
+    "/images/Witness-NHL Projects-Gas-Welding-002.webp",
   welderPipe:
     "/images/WhatsApp-Image-2024-05-24-at-17.37.55_de50077d.jpg",
   stovePot:
@@ -36,7 +36,7 @@ export const CONTACT = {
   phoneHref: "tel:+27842260353",
   email: "witnessmabasa@nhl-projects.co.za",
   addressLines: ["22 Kokerboom Cres", "Birchleigh", "Kempton Park", "1621"],
-  area: "Based in Ekurhuleni — Kempton Park, Birchleigh",
+  area: "We serve clients nationwide across South Africa and throughout the Southern African Development Community (SADC) region.",
 };
 
 export const HOURS = [
@@ -112,7 +112,7 @@ export const SERVICES: Service[] = [
     id: "01",
     title: "Gas Stoves",
     tagline: "Installation & Maintenance",
-    desc: "We install gas stoves of all kinds in both domestic and commercial premises — and keep them running at their best.",
+    desc: "We install gas stoves of all kinds in both domestic and industrial and commercial premises — and keep them running at their best.",
     bullets: [
       "Assessment fee R650",
       "R650 annual service per appliance",
@@ -122,9 +122,9 @@ export const SERVICES: Service[] = [
   },
   {
     id: "02",
-    title: "C.O.C Issuance",
-    tagline: "Domestic & Commercial",
-    desc: "We issue the Certificate of Compliance in gas works to both domestic and commercial clients — safe, legal, certified.",
+    title: "Certificate of Compliance",
+    tagline: "Domestic & industrial and commercial",
+    desc: "We issue the Certificate of Compliance in gas works to both domestic and industrial and commercial clients — safe, legal, certified.",
     image: IMAGES.cylindersRed,
   },
   {
@@ -133,13 +133,13 @@ export const SERVICES: Service[] = [
     tagline: "9KG — 48KG · Free Delivery",
     desc: "We refill and exchange gas from small to bulk cylinders at an affordable charge — delivered free, the same day, around Kempton Park and surrounding areas.",
     bullets: ["9KG", "12KG", "14KG", "19KG", "48KG Cylinders"],
-    image: IMAGES.cylindersYellow,
+    image: IMAGES.gasLine,
   },
   {
     id: "04",
     title: "Gas Welding",
     tagline: "Welding & Cutting",
-    desc: "All sorts of gas welding and cutting — precision work for industrial, commercial and domestic needs.",
+    desc: "All sorts of gas welding and cutting — precision work for industrial and commercial and domestic needs.",
     image: IMAGES.weldingSparks,
   },
 ];
@@ -163,7 +163,7 @@ export const TIMELINE = [
     year: "2023",
     title: "Sector Expansion",
     subtitle: "Growth",
-    desc: "Became a commercial gas installer for liquid and vapour — a qualified trade-test plumber and a member of the SA plumbing industry.",
+    desc: "Became a industrial and commercial gas installer for liquid and vapour — a qualified trade-test plumber and a member of the SA plumbing industry.",
   },
   {
     year: "2024",
@@ -175,7 +175,7 @@ export const TIMELINE = [
     year: "Now",
     title: "BEE Level 1 & Service Delivery",
     subtitle: "Present",
-    desc: "A BEE Level 1 rated gas installation company with successful projects across the public, private and domestic sectors — in South Africa and across the border.",
+    desc: "A BEE Level 1 rated gas installation company with successful projects across the public, private and domestic sectors — in South Africa and throughout the Southern African Development Community (SADC) region.",
   },
 ];
 
@@ -196,10 +196,10 @@ export const PROJECTS = [
     title: "Gas Line Installation",
     subtitle: "Vaal University Science Lab Renovations",
     category: "Gas Lines",
-    image: IMAGES.gasLine,
+    image: IMAGES.tanks,
   },
   {
-    title: "Commercial Gas",
+    title: "Industrial and Commercial Gas",
     subtitle: "Bulk Gas Installation",
     category: "Bulk LPG",
     image: IMAGES.tanks,
@@ -215,7 +215,7 @@ export const PROJECTS = [
 export const TESTIMONIALS = [
   {
     quote:
-      "I have always ordered my gas exchange from NHL Projects Gasmen for the past 2 years because they are reliable and convenient.",
+      "I have always ordered my gas exchange from NHL Projects NHL Projects for the past 2 years because they are reliable and convenient.",
     name: "Shad Rammekoane",
     role: "Managing Director",
   },
