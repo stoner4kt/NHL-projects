@@ -20,7 +20,7 @@ export const IMAGES = {
   tanks:
     "/images/IMG-20240605-WA0032.jpg",
   weldingSparks:
-    "/images/Witness-NHL Projects-Gas-Welding-002.webp",
+    "/images/Witness-Gasmen-Gas-Welding-002.webp",
   welderPipe:
     "/images/WhatsApp-Image-2024-05-24-at-17.37.55_de50077d.jpg",
   stovePot:
@@ -116,7 +116,7 @@ export const SERVICES: Service[] = [
     bullets: [
       "Assessment fee R650",
       "R650 annual service per appliance",
-      "All stove types — domestic & commercial",
+      "All stove types — domestic & industrial and commercial",
     ],
     image: IMAGES.stovePot,
   },
@@ -215,7 +215,7 @@ export const PROJECTS = [
 export const TESTIMONIALS = [
   {
     quote:
-      "I have always ordered my gas exchange from NHL Projects NHL Projects for the past 2 years because they are reliable and convenient.",
+      "I have always ordered my gas exchange from NHL Projects Gasmen for the past 2 years because they are reliable and convenient.",
     name: "Shad Rammekoane",
     role: "Managing Director",
   },
