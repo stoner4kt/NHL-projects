@@ -36,23 +36,20 @@ export default function ServicePage({ slug }: { slug: string }) {
   return (
     <div className="min-h-screen bg-ink text-bone">
       <header className="border-b border-line bg-ink/95">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8">
-          <a href="/" className="flex items-center gap-3 font-display text-xl tracking-wide uppercase">
-            <span className="grid h-10 w-10 place-items-center rounded-xl border border-flame/40 bg-coal text-flame">
-              N
-            </span>
-            NHL Projects
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
+          <a href="/" className="flex items-center gap-3">
+            <img src="/images/Nhl-Projects-Logo-2048x2048.png" alt="NHL Projects logo" className="h-12 w-12 rounded-xl object-contain" />
+            <span className="font-display text-xl tracking-wide uppercase">NHL Projects</span>
           </a>
-          <a
-            href="/#contact"
-            className="hidden rounded-full border border-line px-5 py-2.5 font-mono text-[10px] font-semibold tracking-[0.18em] text-bone uppercase transition-colors hover:border-flame hover:text-flame sm:block"
-          >
-            Get a Quote
-          </a>
+          <nav className="hidden items-center gap-6 lg:flex">
+            <a href="/" className="font-mono text-[10px] tracking-[0.18em] text-fog uppercase hover:text-flame">Home</a>
+            <a href="/#about" className="font-mono text-[10px] tracking-[0.18em] text-fog uppercase hover:text-flame">About</a>
+            <a href="/#services" className="font-mono text-[10px] tracking-[0.18em] text-fog uppercase hover:text-flame">Services</a>
+            <a href="/#contact" className="rounded-full border border-line px-5 py-2.5 font-mono text-[10px] font-semibold tracking-[0.18em] text-bone uppercase hover:border-flame hover:text-flame">Get a Quote</a>
+          </nav>
+          <a href="/#contact" className="rounded-full border border-line px-4 py-2 font-mono text-[9px] font-semibold tracking-[0.18em] text-bone uppercase hover:border-flame hover:text-flame sm:hidden">Quote</a>
         </div>
-      </header>
-
-      <main>
+      </header>      <main>
         <section className="relative overflow-hidden border-b border-line bg-coal py-20 md:py-28">
           <div className="mx-auto grid max-w-7xl gap-12 px-5 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-20">
             <Reveal>
