@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import { PROJECTS } from "../data/content";
+import { GALLERY_IMAGES, PROJECTS } from "../data/content";
 import { Reveal, SectionHeading } from "./ui";
 
 export default function Projects() {
@@ -54,6 +54,34 @@ export default function Projects() {
               </a>
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-16 border-t border-line pt-12 lg:mt-20">
+          <div className="flex flex-wrap items-end justify-between gap-5">
+            <div>
+              <p className="font-mono text-[10px] tracking-[0.3em] text-flame uppercase">Project Gallery</p>
+              <h3 className="mt-3 font-display text-3xl tracking-wide text-bone uppercase md:text-4xl">
+                More work from our archive.
+              </h3>
+            </div>
+            <p className="max-w-md text-sm leading-relaxed text-fog">
+              Additional project imagery from NHL Projects work, presented without changing the existing project-card layout.
+            </p>
+          </div>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {GALLERY_IMAGES.map((image, i) => (
+              <Reveal key={image.src} delay={i * 0.04}>
+                <div className="group overflow-hidden rounded-2xl border border-line bg-coal">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    loading="lazy"
+                    className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>
