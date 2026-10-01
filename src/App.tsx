@@ -7,8 +7,11 @@ import Nav from "./components/Nav";
 import Pricing from "./components/Pricing";
 import Projects from "./components/Projects";
 import Services from "./components/Services";
+import ServicePage from "./components/ServicePage";
 import Testimonials from "./components/Testimonials";
 import { Marquee } from "./components/ui";
+
+const SERVICE_PATH_PREFIX = "/services/";
 
 const ACCREDITATION_STRIP = [
   "BEE Level 1 Contributor",
@@ -21,6 +24,12 @@ const ACCREDITATION_STRIP = [
 ];
 
 export default function App() {
+  const pathname = window.location.pathname.replace(/\/+$/, "") || "/";
+
+  if (pathname.startsWith(SERVICE_PATH_PREFIX)) {
+    return <ServicePage slug={pathname.slice(SERVICE_PATH_PREFIX.length)} />;
+  }
+
   return (
     <div className="relative min-h-screen bg-ink text-bone">
       <Nav />

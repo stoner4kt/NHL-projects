@@ -27,9 +27,7 @@ export default function Footer() {
               </span>
             </a>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-fog">
-              NHL Projects — Trading As NHL Projects (Pty) Limited. We are
-              accountable for all our decisions and activities that may impact the
-              environment and society in general, to live green with gas.
+              NHL Projects — Trading As NHL Projects (Pty) Limited. We serve clients nationwide across South Africa and throughout the Southern African Development Community (SADC) region.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {["BEE Level 1", "CIDB", "LPGSA", "SAQCC Gas"].map((b) => (

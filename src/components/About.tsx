@@ -46,8 +46,7 @@ export default function About() {
                 activities that may impact the environment and society in general —
                 to live green with gas. What began as a one-man domestic installation
                 operation is today a registered, multi-accredited team serving the
-                public, private and domestic sectors across South Africa and beyond
-                the border.
+                public, private and domestic sectors. We serve clients nationwide across South Africa and throughout the Southern African Development Community (SADC) region.
               </p>
             </Reveal>
 
