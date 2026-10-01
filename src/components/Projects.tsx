@@ -22,7 +22,7 @@ export default function Projects() {
           {PROJECTS.map((p, i) => (
             <Reveal key={p.title} delay={(i % 3) * 0.08} className="h-full">
               <a
-                href="#contact"
+                href={`/services/${({ "Drainage & Water Supply": "gas-system-setup", "Laboratory Renovations": "medical-gas-infrastructure", "Gas Line Installation": "gas-pipe-line-work", "Industrial and Commercial Gas": "lpg-bulk-gas", "Gas Stove": "gas-appliance-installation" } as Record<string, string>)[p.title] || "gas-system-setup"}`
                 className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-coal transition-all duration-300 hover:-translate-y-1.5 hover:border-flame/40"
               >
                 <div className="relative overflow-hidden">
