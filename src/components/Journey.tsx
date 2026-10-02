@@ -12,7 +12,7 @@ export default function Journey() {
           label="Our Journey"
           title={
             <>
-              From Malamulele to the <span className="flame-gradient-text">SADC region.</span>
+              From Malamulele to <span className="flame-gradient-text">South Africa and SADC.</span>
             </>
           }
         />
