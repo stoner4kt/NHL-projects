@@ -204,7 +204,7 @@ export const PROJECTS = [
     title: "Gas Line Installation",
     subtitle: "Vaal University Science Lab Renovations",
     category: "Gas Lines",
-    image: IMAGES.heroFlames,
+    image: "/images/IMG-20261001-WA0030.jpg",
   },
   {
     title: "Industrial and Commercial Gas",
