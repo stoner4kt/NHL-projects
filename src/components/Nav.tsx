@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, Phone, X } from "lucide-react";
+import { ChevronDown, Menu, Phone, X } from "lucide-react";
+import { SERVICE_PAGES } from "../data/services";
 import { useEffect, useState } from "react";
 import { CONTACT, IMAGES, NAV_LINKS } from "../data/content";
 import { cn } from "../utils/cn";
@@ -58,16 +59,27 @@ export default function Nav() {
 
           {/* Desktop links */}
           <nav className="hidden items-center gap-8 lg:flex">
-            {NAV_LINKS.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                className="group relative font-mono text-[11px] font-medium tracking-[0.18em] text-fog uppercase transition-colors hover:text-bone"
-              >
+            {NAV_LINKS.filter((l) => l.label !== "Services").map((l) => (
+              <a key={l.href} href={l.href} className="group relative font-mono text-[11px] font-medium tracking-[0.18em] text-fog uppercase transition-colors hover:text-bone">
                 {l.label}
                 <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-flame transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
+            <div className="group relative">
+              <a href="#services" className="flex items-center gap-1.5 font-mono text-[11px] font-medium tracking-[0.18em] text-fog uppercase transition-colors hover:text-bone">
+                Services <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />
+              </a>
+              <div className="invisible absolute left-1/2 top-full w-80 -translate-x-1/2 pt-4 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
+                <div className="rounded-2xl border border-line bg-ink/98 p-2 shadow-2xl backdrop-blur-xl">
+                  {SERVICE_PAGES.map((service) => (
+                    <a key={service.slug} href={"/services/" + service.slug} className="block rounded-xl px-4 py-3 transition-colors hover:bg-coal hover:text-flame">
+                      <span className="block font-display text-lg uppercase">{service.title}</span>
+                      <span className="mt-1 block font-mono text-[9px] tracking-[0.14em] text-fog/70 uppercase">View service</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
           </nav>
 
           <div className="flex items-center gap-3">
@@ -103,9 +115,9 @@ export default function Nav() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35 }}
-            className="fixed inset-0 z-[60] flex flex-col bg-ink/97 backdrop-blur-2xl"
+            className="fixed inset-0 z-[60] flex min-h-0 flex-col overflow-hidden bg-ink/97 backdrop-blur-2xl"
           >
-            <div className="flex h-[72px] items-center justify-between px-5 md:px-8">
+            <div className="flex h-[72px] shrink-0 items-center justify-between border-b border-line px-5 md:px-8">
               <span className="relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-[var(--color-flame)]/40 bg-gradient-to-br from-[#0a1628] to-[#0d1f42] shadow-[0_6px_24px_-6px_rgba(26,111,255,0.45)]">
               <img src={IMAGES.logo} alt="NHL Projects logo" className="absolute inset-0 z-10 h-full w-full object-contain p-1" onError={(e) => { e.currentTarget.style.display = "none"; }} />
               <svg viewBox="0 0 40 44" fill="none" className="absolute z-0 h-7 w-7" aria-hidden="true">
@@ -122,29 +134,26 @@ export default function Nav() {
                 <X className="h-5 w-5" />
               </button>
             </div>
-            <nav className="flex flex-1 flex-col justify-center gap-1 px-6">
-              {NAV_LINKS.map((l, i) => (
-                <motion.a
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  initial={{ opacity: 0, x: -32 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.08 + i * 0.06, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                  className="group flex items-baseline gap-4 border-b border-line py-4"
-                >
-                  <span className="font-mono text-xs text-flame">0{i + 1}</span>
-                  <span className="font-display text-4xl tracking-wide text-bone uppercase transition-colors group-hover:text-flame">
-                    {l.label}
-                  </span>
+            <nav className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-5 py-5 md:px-8">
+              {NAV_LINKS.filter((l) => l.label !== "Services").map((l, i) => (
+                <motion.a key={l.href} href={l.href} onClick={() => setOpen(false)} initial={{ opacity: 0, x: -32 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.08 + i * 0.06, duration: 0.5, ease: [0.22, 1, 0.36, 1] }} className="group flex min-h-12 items-center gap-4 border-b border-line py-3">
+                  <span className="font-mono text-xs text-flame">0{i + 1}</span><span className="font-display text-2xl tracking-wide text-bone uppercase transition-colors group-hover:text-flame sm:text-3xl">{l.label}</span>
                 </motion.a>
               ))}
+              <div className="border-b border-line py-3">
+                <p className="flex min-h-12 items-center gap-4 font-display text-2xl tracking-wide text-bone uppercase sm:text-3xl"><span className="font-mono text-xs text-flame">05</span> Services</p>
+                <div className="mt-2 grid gap-1 pl-10 sm:grid-cols-2">
+                  {SERVICE_PAGES.map((service) => (
+                    <a key={service.slug} href={"/services/" + service.slug} onClick={() => setOpen(false)} className="rounded-lg border border-transparent px-3 py-2.5 font-mono text-[10px] leading-4 tracking-[0.08em] text-fog uppercase transition-colors hover:border-line hover:bg-coal hover:text-flame">{service.title}</a>
+                  ))}
+                </div>
+              </div>
             </nav>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="px-6 pb-10"
+              className="shrink-0 border-t border-line bg-ink/95 px-5 py-4 pb-[max(1rem,env(safe-area-inset-bottom))] backdrop-blur-xl md:px-8"
             >
               <a
                 href={CONTACT.phoneHref}

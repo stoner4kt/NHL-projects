@@ -1,10 +1,25 @@
 import { ArrowLeft, ArrowUpRight, CheckCircle2, MapPin } from "lucide-react";
-import { getServicePage } from "../data/services";
+import { getServiceGallery, getServicePage } from "../data/services";
+import { useEffect } from "react";
 import { FlameButton, Reveal } from "./ui";
 
 export default function ServicePage({ slug }: { slug: string }) {
   const service = getServicePage(slug);
+  const gallery = getServiceGallery(slug);
 
+  useEffect(() => {
+    if (!service) return;
+    document.title = service.seoTitle || service.title + " | NHL Projects";
+    const meta = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
+    if (meta) meta.content = service.metaDescription || service.description;
+    const canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (canonical) canonical.href = window.location.origin + "/services/" + service.slug;
+    document.getElementById("service-schema")?.remove();
+    const schema = document.createElement("script"); schema.id = "service-schema"; schema.type = "application/ld+json";
+    schema.textContent = JSON.stringify({"@context":"https://schema.org","@type":"Service","name":service.title,"description":service.description,"url":window.location.href,"image":window.location.origin+service.image,"provider":{"@type":"LocalBusiness","name":"NHL Projects (Pty) Ltd","telephone":"+27 84 226 0353","address":{"@type":"PostalAddress","streetAddress":"22 Kokerboom Cres","addressLocality":"Birchleigh, Kempton Park","postalCode":"1621","addressCountry":"ZA"}},"areaServed":[{"@type":"State","name":"Gauteng"},{"@type":"Country","name":"South Africa"}]});
+    document.head.appendChild(schema);
+    return () => schema.remove();
+  }, [service]);
   if (!service) {
     return (
       <main className="min-h-screen bg-ink px-5 py-32 text-bone">
@@ -21,23 +36,20 @@ export default function ServicePage({ slug }: { slug: string }) {
   return (
     <div className="min-h-screen bg-ink text-bone">
       <header className="border-b border-line bg-ink/95">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8">
-          <a href="/" className="flex items-center gap-3 font-display text-xl tracking-wide uppercase">
-            <span className="grid h-10 w-10 place-items-center rounded-xl border border-flame/40 bg-coal text-flame">
-              N
-            </span>
-            NHL Projects
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
+          <a href="/" className="flex items-center gap-3">
+            <img src="/images/Nhl-Projects-Logo-2048x2048.png" alt="NHL Projects logo" className="h-12 w-12 rounded-xl object-contain" />
+            <span className="font-display text-xl tracking-wide uppercase">NHL Projects</span>
           </a>
-          <a
-            href="/#contact"
-            className="hidden rounded-full border border-line px-5 py-2.5 font-mono text-[10px] font-semibold tracking-[0.18em] text-bone uppercase transition-colors hover:border-flame hover:text-flame sm:block"
-          >
-            Get a Quote
-          </a>
+          <nav className="hidden items-center gap-6 lg:flex">
+            <a href="/" className="font-mono text-[10px] tracking-[0.18em] text-fog uppercase hover:text-flame">Home</a>
+            <a href="/#about" className="font-mono text-[10px] tracking-[0.18em] text-fog uppercase hover:text-flame">About</a>
+            <a href="/#services" className="font-mono text-[10px] tracking-[0.18em] text-fog uppercase hover:text-flame">Services</a>
+            <a href="/#contact" className="rounded-full border border-line px-5 py-2.5 font-mono text-[10px] font-semibold tracking-[0.18em] text-bone uppercase hover:border-flame hover:text-flame">Get a Quote</a>
+          </nav>
+          <a href="/#contact" className="rounded-full border border-line px-4 py-2 font-mono text-[9px] font-semibold tracking-[0.18em] text-bone uppercase hover:border-flame hover:text-flame sm:hidden">Quote</a>
         </div>
-      </header>
-
-      <main>
+      </header>      <main>
         <section className="relative overflow-hidden border-b border-line bg-coal py-20 md:py-28">
           <div className="mx-auto grid max-w-7xl gap-12 px-5 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-20">
             <Reveal>
@@ -138,6 +150,16 @@ export default function ServicePage({ slug }: { slug: string }) {
           </div>
         </section>
 
+        {gallery.length > 0 && (
+          <section className="border-y border-line bg-coal py-20 md:py-28">
+            <div className="mx-auto max-w-7xl px-5 md:px-8">
+              <Reveal><p className="font-mono text-[10px] tracking-[0.3em] text-flame uppercase">Project Gallery</p><h2 className="mt-4 font-display text-4xl tracking-wide uppercase md:text-5xl">Relevant {service.title} work.</h2></Reveal>
+              <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {gallery.map((item, index) => (<Reveal key={item.src} delay={index * 0.025}><figure className="overflow-hidden rounded-2xl border border-line bg-ink"><img src={item.src} alt={item.alt} loading={index < 3 ? "eager" : "lazy"} className="aspect-[4/3] w-full object-cover" /><figcaption className="px-4 py-3 text-xs text-fog">{item.alt}</figcaption></figure></Reveal>))}
+              </div>
+            </div>
+          </section>
+        )}
         {(service.serviceLevelAgreements || service.whatsCovered || service.plantMaintained) && (
           <section className="py-20 md:py-28">
             <div className="mx-auto grid max-w-7xl gap-8 px-5 md:px-8 lg:grid-cols-3">

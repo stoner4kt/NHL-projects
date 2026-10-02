@@ -7,6 +7,9 @@ export interface ServicePageData {
   sectors: string[];
   image: string;
   coverage?: string;
+  seoTitle?: string;
+  metaDescription?: string;
+  keywords?: string[];
   serviceLevelAgreements?: { tier: string; description: string }[];
   whatsCovered?: string[];
   plantMaintained?: string[];
@@ -18,6 +21,9 @@ const COVERAGE =
 export const SERVICE_PAGES: ServicePageData[] = [
   {
     slug: "gas-appliance-installation",
+    seoTitle: "Gas Appliance Installation in Gauteng & South Africa | NHL Projects",
+    metaDescription: "Professional gas appliance installation for stoves, hobs, ovens, geysers, heaters and fireplaces across Gauteng and South Africa. Contact NHL Projects for compliant gas work.",
+    keywords: ["gas appliance installation Gauteng","gas stove installation Gauteng","gas geyser installation Gauteng","gas fireplace installation South Africa","gas appliance installer South Africa"],
     title: "Gas Appliance Installation",
     description: "Professional fitting and connection of gas appliances across residential and industrial and commercial properties.",
     whatWeDo:
@@ -133,6 +139,9 @@ export const SERVICE_PAGES: ServicePageData[] = [
   },
   {
     slug: "medical-gas-infrastructure",
+    seoTitle: "Medical Gas Infrastructure & Installation South Africa | NHL Projects",
+    metaDescription: "Medical gas infrastructure design, installation and certification for hospitals, clinics, theatres, ICUs, laboratories and veterinary facilities across South Africa and SADC.",
+    keywords: ["medical gas installation South Africa","medical gas pipeline installation","hospital medical gas infrastructure","medical oxygen pipeline installation","medical gas systems Gauteng"],
     title: "Medical Gas Infrastructure",
     description: "Pipeline reticulation design, installation, and certification for oxygen, nitrous oxide, medical air, and vacuum systems.",
     whatWeDo:
@@ -158,6 +167,9 @@ export const SERVICE_PAGES: ServicePageData[] = [
   },
   {
     slug: "industrial-gas-infrastructure",
+    seoTitle: "Industrial Gas Infrastructure & Reticulation South Africa | NHL Projects",
+    metaDescription: "Industrial gas infrastructure, bulk storage, manifolds and high-pressure reticulation for mining, manufacturing, petrochemical and industrial sites across South Africa.",
+    keywords: ["industrial gas installation South Africa","industrial gas infrastructure Gauteng","gas pipeline reticulation South Africa","bulk gas installation Gauteng","high pressure gas installation"],
     title: "Industrial Gas Infrastructure",
     description: "Bulk cryogenic storage, manifold rooms, and high-pressure reticulation for industrial sites.",
     whatWeDo:
@@ -181,6 +193,9 @@ export const SERVICE_PAGES: ServicePageData[] = [
   },
   {
     slug: "lpg-bulk-gas",
+    seoTitle: "LPG & Bulk Gas Installation in Gauteng & South Africa | NHL Projects",
+    metaDescription: "LPG and bulk gas storage, reticulation, manifolds and vaporiser plant for hospitality, healthcare, manufacturing, mining and commercial sites across South Africa.",
+    keywords: ["LPG installation Gauteng","bulk LPG installation South Africa","bulk gas installation Gauteng","LPG reticulation South Africa","commercial LPG systems"],
     title: "LPG & Bulk Gas",
     description: "LPG storage, vaporiser plant, and full-site reticulation across multiple sectors.",
     whatWeDo:
@@ -252,6 +267,9 @@ export const SERVICE_PAGES: ServicePageData[] = [
   },
   {
     slug: "compressed-gas",
+    seoTitle: "Compressed Gas Installation & Maintenance South Africa | NHL Projects",
+    metaDescription: "Compressed gas installation, maintenance and repairs for industrial, medical and manufacturing environments across Gauteng, South Africa and the SADC region.",
+    keywords: ["compressed gas installation South Africa","compressed gas systems Gauteng","compressed gas maintenance","industrial compressed gas installer","compressed gas repairs South Africa"],
     title: "Compressed Gas",
     description: "Qualified compressed gas installation, maintenance, and compliance across South Africa.",
     whatWeDo:
@@ -298,6 +316,9 @@ export const SERVICE_PAGES: ServicePageData[] = [
   },
   {
     slug: "powder-coating",
+    seoTitle: "Powder Coating Equipment & Systems South Africa | NHL Projects",
+    metaDescription: "Powder coating equipment and systems: design, build, commissioning, repairs and maintenance for manufacturing, automotive, metal and industrial clients in South Africa.",
+    keywords: ["powder coating services South Africa","powder coating equipment Gauteng","powder coating plant installation","powder coating system maintenance","industrial powder coating systems"],
     title: "Powder Coating Services",
     description: "Professional powder coating — design, build, commission, repair, and maintenance.",
     whatWeDo:
@@ -405,7 +426,103 @@ export const SERVICE_PAGES: ServicePageData[] = [
     image: "/images/Vaal-University-Science-Lab-Renovation-1-433x577.jpg",
     coverage: COVERAGE,
   },
+
+  {
+    slug: "plumbing-services",
+    seoTitle: "Plumbing Services in Gauteng & South Africa | NHL Projects",
+    metaDescription: "Professional plumbing services for drainage, water supply and plumbing installations across Gauteng and South Africa. NHL Projects combines plumbing and gas expertise for domestic, commercial and industrial projects.",
+    keywords: ["plumbing services Gauteng","plumber Kempton Park","plumbing company Gauteng","commercial plumbing South Africa","industrial plumbing Gauteng","drainage and water supply Gauteng"],
+    title: "Plumbing Services",
+    description: "Professional plumbing, drainage and water-supply services for residential, commercial and industrial projects across Gauteng and South Africa.",
+    whatWeDo: "NHL Projects provides plumbing services alongside its gas installation work, including drainage and water-supply projects, plumbing installations, repairs and project support. Our plumbing capability is suited to domestic, commercial, industrial and institutional environments.",
+    capabilities: [
+      "Water supply installation and repairs",
+      "Drainage installation and repairs",
+      "Plumbing pipework and connections",
+      "Commercial and industrial plumbing support",
+      "Plumbing project installation and maintenance",
+    ],
+    sectors: [
+      "Residential properties",
+      "Commercial buildings",
+      "Industrial facilities",
+      "Healthcare facilities",
+      "Schools and universities",
+      "Hospitality properties",
+    ],
+    image: "/images/Drainage-and-water-supply1plumbing.jpg",
+    coverage: COVERAGE,
+  },
 ];
+
+export const SERVICE_GALLERY: Record<string, { src: string; alt: string }[]> = {
+  "plumbing-services": [
+    { src: "/images/Drainage-and-water-supply1plumbing.jpg", alt: "NHL Projects drainage and water supply plumbing project" },
+    { src: "/images/IMG-20261001-WA0001.jpg", alt: "NHL Projects plumbing project in South Africa" },
+    { src: "/images/IMG-20261001-WA0002.jpg", alt: "NHL Projects plumbing installation project" },
+    { src: "/images/IMG-20261001-WA0003.jpg", alt: "NHL Projects water supply and plumbing work" },
+    { src: "/images/IMG-20261001-WA0004.jpg", alt: "NHL Projects plumbing services project" },
+    { src: "/images/IMG-20261001-WA0005.jpg", alt: "NHL Projects drainage and plumbing work" },
+    { src: "/images/IMG-20261001-WA0006.jpg", alt: "NHL Projects plumbing installation" },
+  ],
+  "gas-appliance-installation": [
+    { src: "/images/GasStove2.jpg", alt: "Gas stove installation by NHL Projects" },
+    { src: "/images/Gasstove1.jpg", alt: "Gas appliance installation by NHL Projects" },
+    { src: "/images/gasstove3.jpg", alt: "Gas stove and appliance installation" },
+    { src: "/images/Gas-Fire-Place-Installation.jpg", alt: "Gas fireplace installation by NHL Projects" },
+    { src: "/images/IMG-20261001-WA0007.jpg", alt: "Gas appliance installation project in South Africa" },
+    { src: "/images/IMG-20261001-WA0009.jpg", alt: "NHL Projects gas installation work" },
+  ],
+  "medical-gas-infrastructure": [
+    { src: "/images/Vaal-University-Science-Lab-Renovation1.jpg", alt: "Medical and laboratory infrastructure project" },
+    { src: "/images/Vaal-University-Science-Lab-Renovation2.jpg", alt: "Laboratory infrastructure project" },
+    { src: "/images/Vaal-University-Science-Lab-Renovation3.jpg", alt: "Laboratory renovation and infrastructure work" },
+    { src: "/images/Vaal-University-Science-Lab-Renovation4.jpg", alt: "Laboratory project by NHL Projects" },
+    { src: "/images/IMG-20261001-WA0010.jpg", alt: "NHL Projects infrastructure installation" },
+    { src: "/images/IMG-20261001-WA0011.jpg", alt: "NHL Projects technical infrastructure work" },
+  ],
+  "industrial-gas-infrastructure": [
+    { src: "/images/IMG-20240605-WA0032.jpg", alt: "Industrial gas infrastructure installation" },
+    { src: "/images/Gas-line.jpg", alt: "Gas line installation by NHL Projects" },
+    { src: "/images/gascylinder1.jpg", alt: "Compressed gas cylinder installation" },
+    { src: "/images/IMG-20261001-WA0012.jpg", alt: "Industrial gas project in South Africa" },
+    { src: "/images/IMG-20261001-WA0013.jpg", alt: "Industrial gas installation project" },
+    { src: "/images/IMG-20261001-WA0014.jpg", alt: "Gas infrastructure work by NHL Projects" },
+  ],
+  "lpg-bulk-gas": [
+    { src: "/images/001.webp", alt: "Bulk LPG gas installation" },
+    { src: "/images/023.webp", alt: "LPG gas cylinders for bulk gas services" },
+    { src: "/images/IMG-20261001-WA0015.jpg", alt: "LPG installation project in South Africa" },
+    { src: "/images/IMG-20261001-WA0016.jpg", alt: "Bulk gas installation project" },
+    { src: "/images/IMG-20261001-WA0018.jpg", alt: "LPG infrastructure project" },
+    { src: "/images/IMG-20261001-WA0019.jpg", alt: "NHL Projects LPG gas work" },
+  ],
+  "compressed-gas": [
+    { src: "/images/gascylinder1.jpg", alt: "Compressed gas cylinders and installation" },
+    { src: "/images/Gas-line.jpg", alt: "Compressed gas line installation" },
+    { src: "/images/IMG-20261001-WA0020.jpg", alt: "Compressed gas installation project" },
+    { src: "/images/IMG-20261001-WA0021.jpg", alt: "Compressed gas infrastructure work" },
+    { src: "/images/IMG-20261001-WA0022.jpg", alt: "Compressed gas system project" },
+    { src: "/images/IMG-20261001-WA0023.jpg", alt: "Industrial compressed gas work" },
+  ],
+  "powder-coating": [
+    { src: "/images/IMG-20261001-WA0024.jpg", alt: "Powder coating project by NHL Projects" },
+    { src: "/images/IMG-20261001-WA0025.jpg", alt: "Powder coating equipment and systems" },
+    { src: "/images/IMG-20261001-WA0026.jpg", alt: "Industrial powder coating work" },
+    { src: "/images/IMG-20261001-WA0027.jpg", alt: "Powder coating installation project" },
+    { src: "/images/IMG-20261001-WA0028.jpg", alt: "Powder coating system project in South Africa" },
+    { src: "/images/IMG-20261001-WA0029.jpg", alt: "Powder coating equipment project" },
+    { src: "/images/IMG-20261001-WA0030.jpg", alt: "Industrial coating project" },
+    { src: "/images/IMG-20261001-WA0031.jpg", alt: "Powder coating services project" },
+    { src: "/images/IMG-20261001-WA0032.jpg", alt: "Powder coating technical project" },
+    { src: "/images/IMG-20261001-WA0033.jpg", alt: "Powder coating equipment work" },
+    { src: "/images/IMG-20261001-WA0034.jpg", alt: "Powder coating installation and maintenance" },
+  ],
+};
+
+export function getServiceGallery(slug: string) {
+  return SERVICE_GALLERY[slug] ?? [];
+}
 
 export function getServicePage(slug: string) {
   return SERVICE_PAGES.find((service) => service.slug === slug);
