@@ -8,6 +8,7 @@ const PROJECT_SERVICE_ROUTES: Record<string, string> = {
   "Gas Line Installation": "gas-pipe-line-work",
   "Industrial and Commercial Gas": "lpg-bulk-gas",
   "Gas Stove": "gas-appliance-installation",
+  "Compressed Gas": "compressed-gas",
 };
 
 function getProjectServiceRoute(title: string) {
