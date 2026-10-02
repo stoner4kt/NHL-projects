@@ -289,7 +289,7 @@ export const SERVICE_PAGES: ServicePageData[] = [
       "Laboratories",
       "Industrial and commercial",
     ],
-    image: "/images/Gas-Fire-Place-Installation.jpg",
+    image: "/images/010.webp",
     coverage: COVERAGE,
   },
   {
