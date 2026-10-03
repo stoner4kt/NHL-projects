@@ -141,7 +141,7 @@ export default function Nav() {
                 </motion.a>
               ))}
               <div className="border-b border-line py-3">
-                <p className="flex min-h-12 items-center gap-4 font-display text-2xl tracking-wide text-bone uppercase sm:text-3xl"><span className="font-mono text-xs text-flame">05</span> Services</p>
+                <p className="flex min-h-12 items-center gap-4 font-display text-2xl tracking-wide text-bone uppercase sm:text-3xl"><span className="font-mono text-xs text-flame">06</span> Services</p>
                 <div className="mt-2 grid gap-1 pl-10 sm:grid-cols-2">
                   {SERVICE_PAGES.map((service) => (
                     <a key={service.slug} href={"/services/" + service.slug} onClick={() => setOpen(false)} className="rounded-lg border border-transparent px-3 py-2.5 font-mono text-[10px] leading-4 tracking-[0.08em] text-fog uppercase transition-colors hover:border-line hover:bg-coal hover:text-flame">{service.title}</a>
