@@ -141,7 +141,14 @@ export const SERVICES: Service[] = [
     title: "Gas Welding",
     tagline: "Welding & Cutting",
     desc: "All sorts of gas welding and cutting — precision work for industrial and commercial and domestic needs.",
-    image: IMAGES.weldingSparks,
+    image: "/images/Witness-Gasmen-Gas-Welding-002.webp",
+  },
+  {
+    id: "05",
+    title: "Compressed Gas",
+    tagline: "Installation & Maintenance",
+    desc: "Qualified compressed gas installation, maintenance, and compliance across South Africa.",
+    image: "/images/IMG-20261001-WA0014.jpg",
   },
 ];
 
@@ -197,7 +204,7 @@ export const PROJECTS = [
     title: "Gas Line Installation",
     subtitle: "Vaal University Science Lab Renovations",
     category: "Gas Lines",
-    image: IMAGES.heroFlames,
+    image: "/images/IMG-20261001-WA0030.jpg",
   },
   {
     title: "Industrial and Commercial Gas",
